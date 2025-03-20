@@ -1,21 +1,30 @@
-﻿
-using System;
-
-namespace Влад_Дейко
+﻿namespace завдання__3
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Deiko");
-            double a, x, y; a = 10;
-            x = 12.5 * a;
-            y = 8.5 * x + (9 + 3  * a) / (a + 1);
-            Console.WriteLine($"a={a} ,x={x},y={y}");    
-            double Y = Math.Sqrt(y);
-            double X = Math.Pow(x, a);
-            Console.WriteLine($"корінь із y={Y}");
-            Console.WriteLine($"x в степени a = {X}");
+            // Дейко Влад
+            Console.WriteLine("Дейко Влад");
+
+            // Введення вартості булочки
+            Console.Write("Введiть вартiсть булочки (гривнi): ");
+            int hryvnias = int.Parse(Console.ReadLine());
+
+            Console.Write("Введiть вартiсть булочки (копiйки): ");
+            int kopecks = int.Parse(Console.ReadLine());
+
+            // Введення кількості булочок
+            Console.Write("Введiть кількiсть булочок: ");
+            int quantity = int.Parse(Console.ReadLine());
+
+            // Обчислення загальної вартості
+            int totalKopecks = (hryvnias * 100 + kopecks) * quantity;
+            int totalHryvnias = totalKopecks / 100;
+            int remainingKopecks = totalKopecks % 100;
+
+            // Виведення результату
+            Console.WriteLine($"За {quantity} булочок необхiдно заплатити {totalHryvnias} гривень {remainingKopecks} копiйок.");
         }
     }
 }
