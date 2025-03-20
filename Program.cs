@@ -1,21 +1,23 @@
-﻿
-using System;
+﻿using System;
 
-namespace Влад_Дейко
-{
+namespace завдання;
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Deiko");
-            double a, x, y; a = 10;
-            x = 12.5 * a;
-            y = 8.5 * x + (9 + 3  * a) / (a + 1);
-            Console.WriteLine($"a={a} ,x={x},y={y}");    
-            double Y = Math.Sqrt(y);
-            double X = Math.Pow(x, a);
-            Console.WriteLine($"корінь із y={Y}");
-            Console.WriteLine($"x в степени a = {X}");
-        }
+        // Дейко Влад
+        Console.WriteLine("Дейко Влад");
+
+        // Введення кількості хвилин
+        Console.Write("Введiть кiлькiсть хвилин: ");
+        int totalMinutes = int.Parse(Console.ReadLine());
+
+        // Обчислення годин та хвилин
+        int hours = totalMinutes / 60;
+        int minutes = totalMinutes % 60;
+
+        // Вивід результату у форматі години:хвилини
+        Console.WriteLine($"Результат: {hours:D2}:{minutes:D2}");
     }
-}
+    }
+
