@@ -1,21 +1,36 @@
-﻿
-using System;
-
-namespace Влад_Дейко
+﻿namespace завдання__4
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Deiko");
-            double a, x, y; a = 10;
-            x = 12.5 * a;
-            y = 8.5 * x + (9 + 3  * a) / (a + 1);
-            Console.WriteLine($"a={a} ,x={x},y={y}");    
-            double Y = Math.Sqrt(y);
-            double X = Math.Pow(x, a);
-            Console.WriteLine($"корінь із y={Y}");
-            Console.WriteLine($"x в степени a = {X}");
+            // Дейко Влад
+            Console.WriteLine("Студент:Дейко Влад");
+
+            // Введення кількості комп'ютерів у вересні
+            Console.Write("Введіть кількість комп'ютерів у класі №1: ");
+            int C1 = int.Parse(Console.ReadLine());
+
+            Console.Write("Введіть кількість комп'ютерів у класі №2: ");
+            int C2 = int.Parse(Console.ReadLine());
+
+            // Виведення даних за вересень
+            Console.WriteLine($"Вересень: клас №1 - {C1} комп'ютерів, клас №2 - {C2} комп'ютерів.");
+
+            // Обмін комп'ютерами у жовтні
+            int temp = C1;
+            C1 = C2;
+            C2 = temp;
+
+            // Виведення даних за жовтень
+            Console.WriteLine($"Жовтень: клас №1 - {C1} комп'ютерів, клас №2 - {C2} комп'ютерів.");
+
+            // Зміни в грудні
+            C1 += 3; // Додали 3 комп'ютери в клас №1
+            C2 -= 2; // Вилучили 2 комп'ютери з класу №2
+
+            // Виведення даних за грудень
+            Console.WriteLine($"Грудень: клас №1 - {C1} комп'ютерів, клас №2 - {C2} комп'ютерів.");
         }
     }
 }
