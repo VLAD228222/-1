@@ -1,30 +1,36 @@
-﻿namespace завдання__3
+﻿namespace завдання__4
 {
     internal class Program
     {
         static void Main(string[] args)
         {
             // Дейко Влад
-            Console.WriteLine("Дейко Влад");
+            Console.WriteLine("Студент:Дейко Влад");
 
-            // Введення вартості булочки
-            Console.Write("Введiть вартiсть булочки (гривнi): ");
-            int hryvnias = int.Parse(Console.ReadLine());
+            // Введення кількості комп'ютерів у вересні
+            Console.Write("Введіть кількість комп'ютерів у класі №1: ");
+            int C1 = int.Parse(Console.ReadLine());
 
-            Console.Write("Введiть вартiсть булочки (копiйки): ");
-            int kopecks = int.Parse(Console.ReadLine());
+            Console.Write("Введіть кількість комп'ютерів у класі №2: ");
+            int C2 = int.Parse(Console.ReadLine());
 
-            // Введення кількості булочок
-            Console.Write("Введiть кількiсть булочок: ");
-            int quantity = int.Parse(Console.ReadLine());
+            // Виведення даних за вересень
+            Console.WriteLine($"Вересень: клас №1 - {C1} комп'ютерів, клас №2 - {C2} комп'ютерів.");
 
-            // Обчислення загальної вартості
-            int totalKopecks = (hryvnias * 100 + kopecks) * quantity;
-            int totalHryvnias = totalKopecks / 100;
-            int remainingKopecks = totalKopecks % 100;
+            // Обмін комп'ютерами у жовтні
+            int temp = C1;
+            C1 = C2;
+            C2 = temp;
 
-            // Виведення результату
-            Console.WriteLine($"За {quantity} булочок необхiдно заплатити {totalHryvnias} гривень {remainingKopecks} копiйок.");
+            // Виведення даних за жовтень
+            Console.WriteLine($"Жовтень: клас №1 - {C1} комп'ютерів, клас №2 - {C2} комп'ютерів.");
+
+            // Зміни в грудні
+            C1 += 3; // Додали 3 комп'ютери в клас №1
+            C2 -= 2; // Вилучили 2 комп'ютери з класу №2
+
+            // Виведення даних за грудень
+            Console.WriteLine($"Грудень: клас №1 - {C1} комп'ютерів, клас №2 - {C2} комп'ютерів.");
         }
     }
 }
